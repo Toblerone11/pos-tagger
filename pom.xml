@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -11,13 +11,13 @@
     <build>
 
         <!--<pluginManagement>-->
-            <!--<plugins>-->
-                <!--<plugin>-->
-                    <!--<groupId>org.apache.maven.plugins</groupId>-->
-                    <!--<artifactId>maven-compiler-plugin</artifactId>-->
-                    <!--<version>3.3</version>-->
-                <!--</plugin>-->
-            <!--</plugins>-->
+        <!--<plugins>-->
+        <!--<plugin>-->
+        <!--<groupId>org.apache.maven.plugins</groupId>-->
+        <!--<artifactId>maven-compiler-plugin</artifactId>-->
+        <!--<version>3.3</version>-->
+        <!--</plugin>-->
+        <!--</plugins>-->
         <!--</pluginManagement>-->
 
         <plugins>
@@ -38,15 +38,15 @@
             </plugin>
 
             <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-compiler-plugin</artifactId>-->
-                <!--<version>3.3</version>-->
-                <!--<configuration>-->
-                    <!--<verbose>true</verbose>-->
-                    <!--<fork>true</fork>-->
-                    <!--<executable>C:\Program Files\Java\jdk1.7.0_79\bin</executable>-->
-                    <!--<compilerVersion>3.3</compilerVersion>-->
-                <!--</configuration>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-compiler-plugin</artifactId>-->
+            <!--<version>3.3</version>-->
+            <!--<configuration>-->
+            <!--<verbose>true</verbose>-->
+            <!--<fork>true</fork>-->
+            <!--<executable>C:\Program Files\Java\jdk1.7.0_79\bin</executable>-->
+            <!--<compilerVersion>3.3</compilerVersion>-->
+            <!--</configuration>-->
             <!--</plugin>-->
 
             <plugin>
@@ -61,9 +61,9 @@
 
 
             <!--<plugin>-->
-                <!--<inherited>true</inherited>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-compiler-plugin</artifactId>-->
+            <!--<inherited>true</inherited>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-compiler-plugin</artifactId>-->
             <!--</plugin>-->
         </plugins>
 

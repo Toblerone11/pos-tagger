@@ -5,12 +5,12 @@ vectors_tools\SimpleGoodTuring.class
 corpusdata\files\DataGetter.class
 vectors_tools\KLD.class
 vectors_tools\VectorException.class
+vectors_tools\SmoothException.class
 vectors_tools\DivisionByZeroException.class
 vectors_tools\DifferentLengthException.class
 vectors_tools\VectorOperators.class
 learner\POSLearner.class
 corpusdata\Vocabulary.class
-vectors_tools\SmoothExcption.class
 learner\ClusterWords.class
 corpusdata\Cluster.class
 vectors_tools\Smoothing$1.class

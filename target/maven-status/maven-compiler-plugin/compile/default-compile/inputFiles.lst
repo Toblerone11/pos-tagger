@@ -7,12 +7,12 @@ C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\vectors_tools\Smoothing.j
 C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\corpusdata\Vocabulary.java
 C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\corpusdata\Tagable.java
 C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\learner\ClusterWords.java
+C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\vectors_tools\SmoothException.java
 C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\learner\POSLearner.java
-C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\vectors_tools\SimpleGoodTuring.java
 C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\vectors_tools\KLD.java
+C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\vectors_tools\SimpleGoodTuring.java
 C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\vectors_tools\VectorOperators.java
 C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\corpusdata\files\DataGetter.java
 C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\learner\Recorder.java
 C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\learner\StaticVariables.java
 C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\corpusdata\WordIsNotExsistException.java
-C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java\vectors_tools\SmoothExcption.java
