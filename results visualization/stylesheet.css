@@ -1,0 +1,29 @@
+
+.vertLine {
+  position: fixed;
+  height: 100%;
+  left: 50%;
+  border: 1px solid silver;
+}
+.horLine {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  border: 1px solid silver;
+}
+.circle {
+  border-radius: 50%;
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  padding: 3px;
+  border: 2px solid #666; 
+}
+.word {
+  position: fixed;
+  bottom: 15%;
+  right: 46%;
+  border: 1px solid #666;
+  width: 100px;
+  height: 40px;
+}
