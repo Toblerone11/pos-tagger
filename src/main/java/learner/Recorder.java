@@ -18,18 +18,35 @@ import java.util.Iterator;
  */
 public class Recorder {
 
+    /* constants */
+    private static final String CLUSTER_DIR = "clusterResults\\";
     /* data members */
     BufferedWriter bw;
+    String pathToClusterDir;
     String pathToDir;
 
 
     public Recorder(String pathToDir) {
         bw = null;
         this.pathToDir = pathToDir;
+        this.pathToClusterDir = pathToDir + CLUSTER_DIR;
+        createNewResultsFolder();
+    }
+
+    public void createNewResultsFolder() {
+        File newDir = new File(this.pathToClusterDir);
+        if (newDir.exists()) {
+            for(String file : newDir.list()) {
+                File current = new File(newDir.getPath(), file);
+                current.delete();
+            }
+            newDir.delete();
+        }
+        newDir.mkdirs();
     }
 
     public boolean writeClusterToFile(Cluster cluster) {
-        File clusterFile = new File(pathToDir + cluster.getName() + ".txt");
+        File clusterFile = new File(pathToClusterDir + cluster.getName() + ".txt");
         try {
             clusterFile.createNewFile();
         } catch (IOException e) {

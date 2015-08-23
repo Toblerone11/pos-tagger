@@ -1,11 +1,13 @@
 import os
 import random
 import re
+import shutil
 import numpy as np
 from sklearn.decomposition import PCA
 
 __author__ = 'Ron'
-
+RESULT_FILE = "results.txt"
+CLUSTER_DIR = "clusterResults\\"
 word_with_frequency = re.compile("([\w]+) (\d+)")
 
 
@@ -17,7 +19,7 @@ def getMostFrequentWordsInCluster(pathToFile):
     mostTenFrequentWords = []
     with open(pathToFile, 'r') as clusterFile:
         line = "";
-        while line != "contain words:\n":
+        while line != 'contain words:\n':
             line = clusterFile.readline()
 
         for word in range(10):
@@ -46,10 +48,12 @@ def getMostFrequentWordsInCluster(pathToFile):
 
 
 def getResultsFromAllFiles(pathToDir):
-    with open(pathToDir + "- results.txt", 'w') as resultFile:
+    with open(pathToDir + RESULT_FILE, 'w+') as resultFile:
         if os.path.isdir(pathToDir):
-            for subdir, dirs, files in os.walk(pathToDir):
+            for subdir, dirs, files in os.walk(pathToDir + CLUSTER_DIR):
                 for file in files:
+                    if file == RESULT_FILE or file == "log.txt":
+                        continue
                     print(file)
                     toWrite = file[:-4] + "\t:\t"
                     toWrite += list2String(getMostFrequentWordsInCluster(subdir + os.sep + file))
@@ -78,6 +82,9 @@ def create_word_circle(word_id, x, y, color):
            "top:" + str(abs(y) * 3000) + "px;" + \
            "background:" + color + ";\"></div>\n"
 
+
+def place_css_file(pathToDir):
+    shutil.copy(".\stylesheet.css", pathToDir)
 
 def create_html_visualization(pathToDir):
     print("building html page")
