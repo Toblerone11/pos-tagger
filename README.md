@@ -6,5 +6,7 @@ If one wnat to visualize the results, it requires the following python packages:
   - numpy
   - scikit-learn
   - shutil
+  - nltk
+    - brown
   
 
