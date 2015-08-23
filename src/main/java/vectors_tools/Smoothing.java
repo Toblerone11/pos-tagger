@@ -1,14 +1,10 @@
 package vectors_tools;
 
 import corpusdata.Tagable;
-import corpusdata.Vocabulary;
-import corpusdata.Word;
-import corpusdata.WordIsNotExsistException;
 
 import java.util.*;
 
 /**
- *
  * Created by Ron on 08/08/2015.
  */
 
@@ -26,6 +22,7 @@ public class Smoothing {
 
     /**
      * sorting counts by value of the count and count number of items with same count
+     *
      * @param distribution the vector to count its counts and sort
      */
     private static void sortCounts(int[] distribution) {
@@ -63,6 +60,7 @@ public class Smoothing {
     /**
      * smooth the vector distrbution of some word to avoid singularities points
      * (equals to zero in our case). using Simple good turing smoothing.
+     *
      * @param toTag the part of speech data to tag
      * @return smoothed distribution vector
      */
@@ -77,13 +75,12 @@ public class Smoothing {
         //fix probabilities
         if (counts.length < MIN_LENGTH_TO_SMOOTH) {
             int[] newCounts = new int[MIN_LENGTH_TO_SMOOTH];
-            int[] newCountOfCounts =new int[MIN_LENGTH_TO_SMOOTH];
+            int[] newCountOfCounts = new int[MIN_LENGTH_TO_SMOOTH];
             try {
                 fixVectorDistribution(counts, countOfCounts, newCounts, newCountOfCounts);
                 counts = newCounts;
                 countOfCounts = newCountOfCounts;
-            }
-            catch (ArrayIndexOutOfBoundsException e) {
+            } catch (ArrayIndexOutOfBoundsException e) {
 //                System.out.println(toTag.getName() + " in index: " + toTag.index);
                 return createDefaultVector(distribution.length);
             }
@@ -111,13 +108,15 @@ public class Smoothing {
         for (int i = 0; i < smoothedVector.length; i++)
             smoothedVector[i] = smoothMap.get(distribution[i]);
 
-        counts = null; countOfCounts = null;
+        counts = null;
+        countOfCounts = null;
         return smoothedVector;
     }
 
     /**
      * checking if some distribution have singularities points (zeros probabilities).
      * assuming sortCounts has been activated before
+     *
      * @param distribution vector of distribution.
      * @return true if need smoothing (there is zero), false otherwise.
      */
@@ -136,8 +135,9 @@ public class Smoothing {
      * assuming length of the two vectors are less then 5.
      * taking pair of vectors which should be input to the smoothing method
      * and adapting them
-     * @param n vector of counts.
-     * @param r vector of count o counts related to n.
+     *
+     * @param n    vector of counts.
+     * @param r    vector of count o counts related to n.
      * @param newN new vector to adapt by the old n.
      * @param newR new vector to adapt by the old r.
      */

@@ -7,8 +7,23 @@ package learner;
  */
 public class POSLearner {
 
+    /* statics */
+    private static String pathToCorpusDir = "";
+    private static String pathToOutputDir = ".\\";
+
+
     public static void main(String[] args) {
-        ClusterWords learner = new ClusterWords("D:\\cluster_words\\", 50, 0.1, 20, 2);
+
+        pathToCorpusDir = args[0];
+        pathToOutputDir = args[1];
+
+        StaticVariables.setNumOfClusters(Integer.parseInt(args[2]));
+        StaticVariables.setRareWordTreshold(Integer.parseInt(args[3]));
+        StaticVariables.setMergeTreshold(Double.parseDouble(args[4]));
+        StaticVariables.setWordToClusterTreshold(Double.parseDouble(args[5]));
+
+
+        ClusterWords learner = new ClusterWords(pathToCorpusDir, pathToOutputDir);
         learner.learnPOS();
     }
 }

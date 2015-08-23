@@ -1,7 +1,6 @@
 package corpusdata;
 
 import learner.StaticVariables;
-import vectors_tools.Smoothing;
 
 import java.util.ArrayList;
 
@@ -21,15 +20,16 @@ public class Word extends Tagable {
     private static boolean isNumOfClustersSet = false;
 
 
-
     /* data members */
     private ArrayList<Integer[]> wordsContextDistribution; //each one in the array consist of word index and its count in the
     private int clusterTag;
 
     /*  constructors */
+
     /**
      * C'tor for word that have been watched for the first time while iterating
      * over some corpus.
+     *
      * @param wordName the name of the watched word.
      */
     public Word(String wordName, int index) {
@@ -45,10 +45,11 @@ public class Word extends Tagable {
 
     /**
      * C'tor for data from corpus that had been already parsed.
-     * @param wordName the name of the word.
+     *
+     * @param wordName  the name of the word.
      * @param frequency number of times the word had been watched.
      */
-    public Word(String wordName, int index,  int frequency, ArrayList<Integer[]> wordsContextDistribution) {
+    public Word(String wordName, int index, int frequency, ArrayList<Integer[]> wordsContextDistribution) {
         this(wordName, index);
         this.frequency = frequency;
         if (frequency < StaticVariables.getRareWordTreshold())
@@ -58,7 +59,8 @@ public class Word extends Tagable {
 
     /**
      * set data members relevant to this word, after parsing them if word already added.
-     * @param frequency the count of the word in the corpus.
+     *
+     * @param frequency                the count of the word in the corpus.
      * @param wordsContextDistribution the context vector of the word from the corpus.
      */
     public void setWordData(int frequency, ArrayList<Integer[]> wordsContextDistribution) throws WordIsNotExsistException {
@@ -94,7 +96,7 @@ public class Word extends Tagable {
      */
     public void calculateContextDistribution() throws WordIsNotExsistException {
         buildClusterContextDistribution();
-        Smoothing.smoothProbabilities(this);
+//        Smoothing.smoothProbabilities(this);
     }
 
     /**
@@ -117,7 +119,7 @@ public class Word extends Tagable {
 
 
             //adding the frequency of that context type to the frequency of the cluster context type
-            if ((clusterBefore != 0) && (clusterAfter != 0)) {
+            if ((clusterBefore != 0) || (clusterAfter != 0)) {
                 clusterContextDistribution[(clusterBefore * numOfClusters) + clusterAfter] += contextType[2];
             }
         }

@@ -27,7 +27,6 @@ public class Vocabulary {
     private HashSet<Integer> rareWords;
 
     /**
-     *
      * @param wordsDictionary
      */
     private Vocabulary(HashMap<Integer, Word> wordsDictionary) {
@@ -56,6 +55,7 @@ public class Vocabulary {
 
     /**
      * getter of the single instance of this class
+     *
      * @return Vocabulary single instance.
      */
     public static Vocabulary instance(HashMap<Integer, Word> wordsDictionary) {
@@ -70,6 +70,7 @@ public class Vocabulary {
 
     /**
      * return the vocabulary single instance only if it is already exist.
+     *
      * @return
      */
     public static Vocabulary instance() {
@@ -78,6 +79,7 @@ public class Vocabulary {
 
     /**
      * return the Word object represented by the given index.
+     *
      * @param index the index representing the desired word.
      * @return Word object related to the given index
      */
@@ -91,6 +93,7 @@ public class Vocabulary {
 
     /**
      * adding array of size 2 with word representation and the word's frequency
+     *
      * @param wordIndex the index of the word to add
      */
     public void setWordWithFrequency(int wordIndex) throws WordIsNotExsistException {
@@ -100,13 +103,13 @@ public class Vocabulary {
 
         if (frequency >= StaticVariables.getRareWordTreshold()) {
             frequentWords.add(wordIndex);
-        }
-        else
+        } else
             rareWords.add(wordIndex);
     }
 
     /**
      * finds the most frequent word which doesn't belong yet to any cluster.
+     *
      * @return the most frequent word which is unclustered.
      */
     public Word getMostFrequentUnclusteredWord() {
@@ -123,6 +126,7 @@ public class Vocabulary {
 
     /**
      * return all words in the frequent set. all those words are unclustered.
+     *
      * @return set of frequent words
      */
     public HashSet<Integer> getFrequentWords() {
@@ -131,6 +135,7 @@ public class Vocabulary {
 
     /**
      * gather all words that are unclustered yet.
+     *
      * @return subset of all words contains all unclustered words.
      */
     public HashSet<Integer> getAllUnclustererdWords() {
@@ -140,6 +145,7 @@ public class Vocabulary {
     /**
      * gather all words that are unclustered yet and occurs more times
      * than the given lower bound
+     *
      * @param frequencyLowerBound the treshold which determine if some word is nor rare
      * @return a set of all words that are unclustered nor rare.
      */
@@ -179,6 +185,7 @@ public class Vocabulary {
     /**
      * remove words that already been clustered from the sorted set of words by frequency.
      * they are not needed there anymore.
+     *
      * @param wordWithFrequency the word and its frequency in an array to be removed
      */
     public void removeClusteredWord(int clusteredWord) {

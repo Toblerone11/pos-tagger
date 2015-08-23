@@ -3,7 +3,7 @@ package vectors_tools;
 /**
  * Simple Good-Turing smoothing, based on code from Sampson, available at:
  * ftp://ftp.informatics.susx.ac.uk/pub/users/grs2/SGT.c <p/>
- *
+ * <p/>
  * See also http://www.grsampson.net/RGoodTur.html
  *
  * @author Bill MacCartney (wcmac@cs.stanford.edu)

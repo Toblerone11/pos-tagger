@@ -7,6 +7,7 @@ public class VectorOperators {
 
     /**
      * add to vectors
+     *
      * @param vector1
      * @param vector2
      * @return the sum between two vectors
@@ -22,6 +23,7 @@ public class VectorOperators {
 
     /**
      * get vector of zeros only
+     *
      * @param length the length of the desird vector
      * @return vector of zeros
      */

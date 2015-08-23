@@ -8,10 +8,6 @@ import corpusdata.files.DataGetter;
 import vectors_tools.KLD;
 import vectors_tools.VectorException;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -22,15 +18,15 @@ import java.util.TreeSet;
  * this class implementing the algorithm of alexander clark:
  * 0. initialization - each cluster gets one of the K most frequent words
  * 1. iterate until converage (or until covering of at least P% percent of the words):
- *    1.0 calculate distribution of clusters (average of all words)
- *    1.1 find close clusteres to merge.
- *    1.2 iterate over words that occurs more than 50 times:
- *        1.2.1 calculate the context distribution.
- *        1.2.2 find the closest cluster and the second closest cluster
- *
- *    1.3 sort the words by the ratio between the closest and between the second closest.
- *    1.4 add the best words (which the ration for them is above some constant) to their closst clusters.
- *
+ * 1.0 calculate distribution of clusters (average of all words)
+ * 1.1 find close clusteres to merge.
+ * 1.2 iterate over words that occurs more than 50 times:
+ * 1.2.1 calculate the context distribution.
+ * 1.2.2 find the closest cluster and the second closest cluster
+ * <p/>
+ * 1.3 sort the words by the ratio between the closest and between the second closest.
+ * 1.4 add the best words (which the ration for them is above some constant) to their closst clusters.
+ * <p/>
  * 2. write clusters to files.
  * Created by Ron on 10/08/2015.
  */
@@ -39,45 +35,42 @@ public class ClusterWords {
     /* constants */
     private static final int FOR_UNCLUSTERED = 1, UNCLUSTERED_INDEX = 0;
     private static final int START_OF_CLUSTERS = 1;
-    //private static final int WORD_INDEX = 0, WORD_FREQUENCY = 1;
+    private static final int WORD_INDEX = 0, WORD_DISTANCE = 1, CLOSEST_CLUSTER = 2;
+    private static final double SMOOTHING_RATIO = 0.001;
 
     /* static */
     static int numOfIterations = 0;
 
     /* data members */
     DataGetter dg;
-    Cluster[] allClusters;
+    static Cluster[] allClusters;
     public int numOfClusters;
     final double MERGE_TRESHOLD;
     final double RARE_TRESHOLD;
     final double CLUSTER_TRESHOLD;
     private int maxWordToCluster;
     private int converageTreshold;
-    private String pathToDir;
     private Recorder recorder;
 
     /* constructor */
 
     /**
      * C'tor for the minimal parameters.
-     * @param pathToDir the directory eith all of the data
-     * @param numOfClusters number of clusters.
+     *
+     * @param pathToOutDir the directory eith all of the data
      */
-    public ClusterWords(String pathToDir, int numOfClusters, double mergeTreshold, int rareTreshold, double clusterTreshold) {
-        this.pathToDir = pathToDir;
-        recorder = new Recorder(pathToDir);
-        StaticVariables.setNumOfClusters(numOfClusters);
-        StaticVariables.setRareWordTreshold(rareTreshold);
-        dg = DataGetter.getInstance(pathToDir, "all_words.txt", "dictionary.txt");
+    public ClusterWords(String pathToCorpus, String pathToOutDir) {
+        recorder = new Recorder(pathToOutDir);
+        dg = DataGetter.getInstance(pathToCorpus, "all_words.txt", "dictionary.txt");
         Vocabulary.instance().restartIterator();
-        this.numOfClusters = numOfClusters + FOR_UNCLUSTERED;
+        this.numOfClusters = StaticVariables.getNumOfClusters() + FOR_UNCLUSTERED;
         allClusters = new Cluster[this.numOfClusters];
-        MERGE_TRESHOLD = mergeTreshold;
-        RARE_TRESHOLD = rareTreshold;
-        CLUSTER_TRESHOLD = clusterTreshold;
+        MERGE_TRESHOLD = StaticVariables.getMergeTreshold();
+        RARE_TRESHOLD = StaticVariables.getRareWordTreshold();
+        CLUSTER_TRESHOLD = StaticVariables.getClusterTreshold();
 
-        int vocabSize = Vocabulary.instance().getFrequentWords().size();
-        this.converageTreshold = (int) Math.floor((vocabSize * 80.0 / 100)); // 80% of the corpus.
+        int vocabSize = Word.numOfWords - Word.numOfRareWords;
+        this.converageTreshold = (int) Math.floor((vocabSize * 70.0 / 100)); // 80% of the corpus.
         this.maxWordToCluster = (int) Math.floor(vocabSize * 1.0 / 100); // 1% of the corpus.
     }
 
@@ -92,6 +85,7 @@ public class ClusterWords {
         for (Cluster cluster : allClusters) {
             recorder.writeClusterToFile(cluster);
         }
+        recorder.writeMatrixOfWords();
         recorder.writeLogToFile();
     }
 
@@ -110,7 +104,8 @@ public class ClusterWords {
 
         //the rest of the words initialized to the unclustered category
         assert unclustered != null;
-        unclustered.addAllWords(Vocabulary.instance().getAllUnclustererdWords());
+        for (Integer wordIndex : Vocabulary.instance().getAllUnclustererdWords())
+            unclustered.addWord(wordIndex);
 
         allClusters[0] = unclustered;
         System.out.println("Done");
@@ -120,13 +115,28 @@ public class ClusterWords {
      * iterating in order to cluster all words until 80% percent of the words are clustered.
      */
     private void iterUntilConverage() {
+        int vocabSize = Word.numOfWords - Word.numOfRareWords;
+        int lastIterationClusteredWords = Word.numOfClusteredWords;
         System.out.println("starting iterations");
-        int converageMarker = (Word.numOfWords - Word.numOfRareWords) * this.converageTreshold / 10;
-        while (Word.numOfClusteredWords < converageMarker) {
+        int stopConverageIndicator = 0;
+        while (Word.numOfClusteredWords < converageTreshold) {
             System.out.printf("Iteraration %d\twords left to cluster: %d\n",
-                    numOfIterations++, (Word.numOfWords - Word.numOfRareWords) - Word.numOfClusteredWords);
+                    numOfIterations++, vocabSize - Word.numOfClusteredWords);
 
             iterateToCluster();
+            for (Cluster cluster : allClusters) {
+                if (cluster.index != 0)
+                    recorder.writeClusterToFile(cluster);
+            }
+            if (Word.numOfClusteredWords == lastIterationClusteredWords) {
+                if (stopConverageIndicator == 3)
+                    break;
+                else
+                    stopConverageIndicator++;
+            } else {
+                lastIterationClusteredWords = Word.numOfClusteredWords;
+                stopConverageIndicator = 0;
+            }
         }
         System.out.println("---------clustering process finished--------");
     }
@@ -141,7 +151,7 @@ public class ClusterWords {
         updateClustersDistribution();
 
         /* check for close clusters step */
-        if(mergeCloseClusters())
+        if (mergeCloseClusters())
             updateClustersDistribution(); // distributions update needed.
 
         /* get all unrare unclustered words, their closest cluster and the distance */
@@ -154,24 +164,28 @@ public class ClusterWords {
         clusterLoop:
         while (iterWords.hasNext()) {
             Double[] wordWithCluster = iterWords.next();
-            if (numOfClusteredWords > this.maxWordToCluster) {
-                if (wordWithCluster[2] > CLUSTER_TRESHOLD) {
-                    break clusterLoop;
-                }
+
+//            if (wordWithCluster[2] < CLUSTER_TRESHOLD) { //option for pure distance
+            if ((wordWithCluster[WORD_DISTANCE] > CLUSTER_TRESHOLD) && (numOfClusteredWords > this.maxWordToCluster)) { //option for ration.
+                break clusterLoop;
             }
             int clusterIndex = (int) Math.floor(wordWithCluster[2]);
             int wordIndex = (int) Math.floor(wordWithCluster[0]);
-            allClusters[clusterIndex].addWord(wordIndex);
-            numOfClusteredWords++;
-            try {
-                System.out.printf("the word \"%s\" was clustered: cluster \"%s\"\n",
-                        Vocabulary.instance().getWordByIndex(wordIndex).getName(),
-                        allClusters[clusterIndex].getName());
-            } catch (WordIsNotExsistException e) {
-                e.printStackTrace();
-            }
+            if (clusterIndex != UNCLUSTERED_INDEX) {
+                allClusters[UNCLUSTERED_INDEX].removeWord(wordIndex);
+                allClusters[clusterIndex].addWord(wordIndex);
+                numOfClusteredWords++;
 
+                try {
+                    System.out.printf("the word \"%s\" was clustered to: cluster \"%s\" with ratio [%3f]\n",
+                            Vocabulary.instance().getWordByIndex(wordIndex).getName(),
+                            allClusters[clusterIndex].getName(), wordWithCluster[1]);
+                } catch (WordIsNotExsistException e) {
+                    e.printStackTrace();
+                }
+            }
         }
+        System.out.printf("%d words have been clustered\n\n", numOfClusteredWords);
     }
 
     /**
@@ -188,6 +202,7 @@ public class ClusterWords {
     /**
      * if some cluser is close enough to another by the KLD, the method merges the close cluster into the other.
      * After that the method create a new cluster instead of the one which had been merged.
+     *
      * @param clusterIndex1 the cluster to merge into.
      * @param clusterIndex2 the cluster to merge to other close merge.
      */
@@ -216,13 +231,14 @@ public class ClusterWords {
                     continue;
 
                 try {
-                    if ((tempDist = KLD.calculateDistance(allClusters[clusterToCheck], allClusters[otherCluster])) <= closestDistance) {
+                    if ((tempDist = KLD.calculateDistanceClusterCluster(allClusters[clusterToCheck], allClusters[otherCluster])) <= closestDistance) {
                         closestDistance = tempDist;
                         closestCluster = otherCluster;
                     }
                 } catch (VectorException e) {
                     System.err.println(e.getMessage());
                     e.printStackTrace();
+                    continue;
                 }
             } // inner for
             if (closestCluster != UNCLUSTERED_INDEX) {
@@ -233,13 +249,58 @@ public class ClusterWords {
         return mergeDone;
     }
 
+
     /**
-     * find the closest cluster to some word after smoothing
+     * find the closest cluster which is stable enouth to some word after smoothing.
+     *
      * @param wordToCluster a word to find its closest cluster.
      * @return an array assembled of [index of word, distance to closest cluster, closest cluster].
      * @throws VectorException
      */
-    private Double[] findClosestClusterToWord(int wordToCluster) throws VectorException{
+    private Double[] findStableClosestCluster(int wordToCluster) throws VectorException {
+        Word word = null;
+        try {
+            word = Vocabulary.instance().getWordByIndex(wordToCluster);
+            word.calculateContextDistribution();
+        } catch (WordIsNotExsistException e) {
+            e.printStackTrace();
+        }
+        int closestCluster = -1;
+        double distanceToClosest = Integer.MAX_VALUE;
+        double distanceToSecond = Integer.MAX_VALUE;
+        for (int cluster = 1; cluster < allClusters.length; cluster++) {
+            double distanceToCurrent = KLD.calculateDistanceWordCluster(word, allClusters[cluster]);
+//            if (distanceToCurrent != (double) 0) {
+            if (distanceToCurrent < distanceToClosest) { // found closer cluster.
+                distanceToSecond = distanceToClosest;
+                distanceToClosest = distanceToCurrent;
+                closestCluster = cluster;
+            } else if (distanceToCurrent < distanceToSecond) { // closer only from the second.
+                distanceToSecond = distanceToCurrent;
+            }
+//            }
+        }
+        if (distanceToSecond == (double) 0)
+            distanceToSecond += SMOOTHING_RATIO;
+        if (distanceToClosest == (double) 0)
+            distanceToClosest += SMOOTHING_RATIO;
+
+
+        Double[] calculateToReturn = {(double) word.index,
+                (distanceToClosest / distanceToSecond), //ratio
+                (double) closestCluster};
+
+        return calculateToReturn;
+    }
+
+    /**
+     * find the closest cluster to some word after smoothing
+     *
+     * @param wordToCluster a word to find its closest cluster.
+     * @return an array assembled of [index of word, distance to closest cluster, closest cluster].
+     * @throws VectorException
+     */
+    private Double[] findClosestClusterToWord(int wordToCluster) throws VectorException {
         Word word = null;
         try {
             word = Vocabulary.instance().getWordByIndex(wordToCluster);
@@ -250,20 +311,19 @@ public class ClusterWords {
         int closestCluster = -1;
         double distanceToClosest = Integer.MAX_VALUE;
         for (int cluster = 1; cluster < allClusters.length; cluster++) {
-            double distanceToCurrent = KLD.calculateDistance(word, allClusters[cluster]);
-            if (distanceToCurrent < distanceToClosest) {
+            double distanceToCurrent = KLD.calculateDistanceWordCluster(word, allClusters[cluster]);
+            if ((distanceToCurrent < distanceToClosest) && (distanceToCurrent != (double) 0)) {
                 distanceToClosest = distanceToCurrent;
                 closestCluster = cluster;
             }
         }
-        Double[] calculateToReturn = {(double)word.index, distanceToClosest, (double) closestCluster};
-//        System.out.printf("word: [%s]\tclosest cluster[%s]\tdistance[%f]\n",
-//                           word.getName(), allClusters[closestCluster].getName(), distanceToClosest);
+        Double[] calculateToReturn = {(double) word.index, distanceToClosest, (double) closestCluster};
         return calculateToReturn;
     }
 
     /**
      * iterate over all given words and find the closest cluster to each of them.
+     *
      * @param wordsToCluster a set of words that their closest cluster is to be found.
      * @return a set of double array contains details of the word, closest cluster and the distance.
      */
@@ -271,31 +331,20 @@ public class ClusterWords {
         TreeSet<Double[]> calculatedClosestDistances = new TreeSet<>(new Comparator<Double[]>() {
             @Override
             public int compare(Double[] d1, Double[] d2) {
-                return Double.compare(d2[1], d1[1]);
+                return Double.compare(d1[1], d2[1]);
             }
         });
 
         Iterator<Integer> iterWords = wordsToCluster.iterator();
-        while(iterWords.hasNext()) {
+        while (iterWords.hasNext()) {
             try {
-                calculatedClosestDistances.add(findClosestClusterToWord(iterWords.next()));
-            }
-            catch (VectorException e) {
+                Double[] calcResult = findStableClosestCluster(iterWords.next()); //distance is ratio method
+                if (calcResult[2] != -1)
+                    calculatedClosestDistances.add(calcResult);
+            } catch (VectorException e) {
                 e.printStackTrace();
             }
         } // while
         return calculatedClosestDistances;
-    }
-
-    public void printClusters() {
-        int index = 1;
-        for (int clusterIndex = 1; clusterIndex < allClusters.length; clusterIndex++) {
-            Cluster cluster = allClusters[clusterIndex];
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter(new File(pathToDir + "\\cluster " + index + ".txt")))) {
-                bw.write(cluster.toString());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 }
