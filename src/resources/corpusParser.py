@@ -14,8 +14,8 @@ words["^"] = 0
 words["$"] = 1
 words_context = dict()
 
-NAME_OF_CORPUS = "corpus.txt"
-PATH_TO_WORKSPACE = "D:\\cluster_words\\"
+# NAME_OF_CORPUS = "corpus.txt"
+# PATH_TO_WORKSPACE = "D:\\cluster_words\\"
 legal_word = re.compile("([\w]+|\^|\$)")
 
 def parseSentence(sentence):
@@ -191,12 +191,12 @@ def words2file():
                 key_value_toWrite = None
 
 
-def parseOnCorpus():
+def parseOnCorpus(path_to_corpus):
     """
 
     :rtype : void
     """
-    iterate_simple_file("D:\\corpus\\eng\\children\\br-text.txt")
+    iterate_simple_file(path_to_corpus)
     iterate_brown_corpus()
     context2file()
     words2file()

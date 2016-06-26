@@ -1,10 +1,8 @@
 import os
-import shutil
-import sys
-import corpusParser
 import subprocess
-import re
-import getResults
+import sys
+
+from src.resources import corpusParser, getResults
 
 __author__ = 'Ron'
 usage = "Usage:\n[path to corpus] [path to output directory] [number of clusters] " \
@@ -58,7 +56,7 @@ def parse_args(argv):
 def main():
     parse_args(sys.argv)
 
-    corpusParser.parseOnCorpus()
+    corpusParser.parseOnCorpus(path_to_corpus)
     print(path_to_out_dir)
 
     subprocess.call(['java', '-Xms512m', '-Xmx1024m', '-jar',
