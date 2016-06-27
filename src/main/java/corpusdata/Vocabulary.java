@@ -1,6 +1,6 @@
 package corpusdata;
 
-import learner.StaticVariables;
+import learner.StaticVars;
 
 import java.util.*;
 
@@ -101,7 +101,7 @@ public class Vocabulary {
         Integer[] toAdd = {wordIndex, frequency};
         this.wordsByFrequency.add(toAdd);
 
-        if (frequency >= StaticVariables.getRareWordTreshold()) {
+        if (frequency >= StaticVars.getRareWordTreshold()) {
             frequentWords.add(wordIndex);
         } else
             rareWords.add(wordIndex);

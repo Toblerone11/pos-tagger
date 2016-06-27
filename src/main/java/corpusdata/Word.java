@@ -1,6 +1,6 @@
 package corpusdata;
 
-import learner.StaticVariables;
+import learner.StaticVars;
 
 import java.util.ArrayList;
 
@@ -36,7 +36,7 @@ public class Word extends Tagable {
         this.name = wordName;
         this.index = index;
         numOfWords++;
-        numOfClusters = learner.StaticVariables.getNumOfClusters() + 1;
+        numOfClusters = StaticVars.getNumOfClusters() + 1;
         this.frequency = 1;
         wordsContextDistribution = new ArrayList<>();
         clusterContextDistribution = new int[(int) Math.pow(numOfClusters, 2)];
@@ -52,7 +52,7 @@ public class Word extends Tagable {
     public Word(String wordName, int index, int frequency, ArrayList<Integer[]> wordsContextDistribution) {
         this(wordName, index);
         this.frequency = frequency;
-        if (frequency < StaticVariables.getRareWordTreshold())
+        if (frequency < StaticVars.getRareWordTreshold())
             numOfRareWords++;
         this.wordsContextDistribution = wordsContextDistribution;
     }
@@ -65,7 +65,7 @@ public class Word extends Tagable {
      */
     public void setWordData(int frequency, ArrayList<Integer[]> wordsContextDistribution) throws WordIsNotExsistException {
         this.frequency = frequency;
-        if (frequency < StaticVariables.getRareWordTreshold())
+        if (frequency < StaticVars.getRareWordTreshold())
             numOfRareWords++;
         this.wordsContextDistribution = wordsContextDistribution;
         Vocabulary.instance().setWordWithFrequency(this.index);

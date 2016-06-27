@@ -63,11 +63,11 @@ public class ClusterWords {
         recorder = new Recorder(pathToOutDir);
         dg = DataGetter.getInstance(pathToCorpus, "all_words.txt", "dictionary.txt");
         Vocabulary.instance().restartIterator();
-        this.numOfClusters = StaticVariables.getNumOfClusters() + FOR_UNCLUSTERED;
+        this.numOfClusters = StaticVars.getNumOfClusters() + FOR_UNCLUSTERED;
         allClusters = new Cluster[this.numOfClusters];
-        MERGE_TRESHOLD = StaticVariables.getMergeTreshold();
-        RARE_TRESHOLD = StaticVariables.getRareWordTreshold();
-        CLUSTER_TRESHOLD = StaticVariables.getClusterTreshold();
+        MERGE_TRESHOLD = StaticVars.getMergeTreshold();
+        RARE_TRESHOLD = StaticVars.getRareWordTreshold();
+        CLUSTER_TRESHOLD = StaticVars.getClusterTreshold();
 
         int vocabSize = Word.numOfWords - Word.numOfRareWords;
         this.converageTreshold = (int) Math.floor((vocabSize * 70.0 / 100)); // 80% of the corpus.

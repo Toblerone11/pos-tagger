@@ -3,7 +3,10 @@ package learner;
 /**
  * Created by Ron
  */
-public class StaticVariables {
+public class StaticVars {
+
+    /* constant */
+    static final String NAME_OF_CONTEXT = "words_context", NAME_OF_DICTIONARY = "words_indices";
 
     /* statics */
     private static int NUM_OF_CLUSTERS = 0;

@@ -3,47 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="568d3ea4-9fc6-4f0e-9bfc-7cccea3f4e67" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/corpusdata/Cluster.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/corpusdata/Tagable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/corpusdata/Vocabulary$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/corpusdata/Vocabulary.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/corpusdata/Word.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/corpusdata/WordIsNotExsistException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/corpusdata/files/DataGetter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/learner/ClusterWords$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/learner/ClusterWords.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/learner/POSLearner.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/learner/Recorder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/learner/StaticVariables.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/vectors_tools/DifferentLengthException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/vectors_tools/DivisionByZeroException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/vectors_tools/KLD.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/vectors_tools/SimpleGoodTuring.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/vectors_tools/Smoothing$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/vectors_tools/Smoothing.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/vectors_tools/VectorException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/vectors_tools/VectorOperators.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/posta-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/learner/StaticVariables.java" afterPath="$PROJECT_DIR$/src/main/java/learner/StaticVars.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/learner/POSLearner.class" afterPath="$PROJECT_DIR$/target/classes/learner/POSLearner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/learner/Recorder.class" afterPath="$PROJECT_DIR$/target/classes/learner/Recorder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/learner/StaticVariables.class" afterPath="$PROJECT_DIR$/target/classes/learner/StaticVariables.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pos tagger.iml" afterPath="$PROJECT_DIR$/pos tagger.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/corpusdata/Vocabulary.java" afterPath="$PROJECT_DIR$/src/main/java/corpusdata/Vocabulary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/corpusdata/Word.java" afterPath="$PROJECT_DIR$/src/main/java/corpusdata/Word.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/learner/ClusterWords.java" afterPath="$PROJECT_DIR$/src/main/java/learner/ClusterWords.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/learner/POSLearner.java" afterPath="$PROJECT_DIR$/src/main/java/learner/POSLearner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/learner/StaticVariables.java" afterPath="$PROJECT_DIR$/src/main/java/learner/StaticVariables.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/corpusParser.py" afterPath="$PROJECT_DIR$/src/resources/corpusParser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/getResults.py" afterPath="$PROJECT_DIR$/src/resources/getResults.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/main.py" afterPath="$PROJECT_DIR$/src/resources/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="pos tagger.iws" />
     <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/out/" />
-    <ignored path="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/target/" />
+    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,98 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="POSLearner.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/learner/POSLearner.java">
+      <file leaf-file-name="NumberFormatException.java" pinned="false" current-in-tab="true">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_79/src.zip!/java/lang/NumberFormatException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StaticVars.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/learner/StaticVars.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding>
-                <element signature="method#setWordToClusterTreshold#0;class#StaticVars#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClusterWords.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/learner/ClusterWords.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-              <folding>
-                <element signature="docComment;method#ClusterWords#0;class#ClusterWords#0" expanded="false" />
-                <element signature="docComment;method#learnPOS#0;class#ClusterWords#0" expanded="false" />
-                <element signature="method#learnPOS#0;class#ClusterWords#0" expanded="false" />
-                <element signature="docComment;method#initializeClusters#0;class#ClusterWords#0" expanded="false" />
-                <element signature="method#initializeClusters#0;class#ClusterWords#0" expanded="false" />
-                <element signature="docComment;method#iterUntilConverage#0;class#ClusterWords#0" expanded="false" />
-                <element signature="docComment;method#iterateToCluster#0;class#ClusterWords#0" expanded="false" />
-                <element signature="docComment;method#updateClustersDistribution#0;class#ClusterWords#0" expanded="false" />
-                <element signature="method#updateClustersDistribution#0;class#ClusterWords#0" expanded="false" />
-                <element signature="docComment;method#mergeClusters#0;class#ClusterWords#0" expanded="false" />
-                <element signature="method#mergeClusters#0;class#ClusterWords#0" expanded="false" />
-                <element signature="docComment;method#mergeCloseClusters#0;class#ClusterWords#0" expanded="false" />
-                <element signature="method#mergeCloseClusters#0;class#ClusterWords#0" expanded="false" />
-                <element signature="docComment;method#findStableClosestCluster#0;class#ClusterWords#0" expanded="false" />
-                <element signature="method#findStableClosestCluster#0;class#ClusterWords#0" expanded="false" />
-                <element signature="docComment;method#findClosestClusterToWord#0;class#ClusterWords#0" expanded="false" />
-                <element signature="method#findClosestClusterToWord#0;class#ClusterWords#0" expanded="false" />
-                <element signature="docComment;method#findClosestClusterToAllWords#0;class#ClusterWords#0" expanded="false" />
-                <element signature="method#findClosestClusterToAllWords#0;class#ClusterWords#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Word.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/corpusdata/Word.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-              <folding>
-                <element signature="method#Word#1;class#Word#0" expanded="false" />
-                <element signature="docComment;method#setWordData#0;class#Word#0" expanded="false" />
-                <element signature="method#setWordData#0;class#Word#0" expanded="false" />
-                <element signature="docComment;method#calculateContextDistribution#0;class#Word#0" expanded="false" />
-                <element signature="docComment;method#buildClusterContextDistribution#0;class#Word#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Recorder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/learner/Recorder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1550">
-              <caret line="185" column="43" selection-start-line="185" selection-start-column="43" selection-end-line="185" selection-end-column="43" />
-              <folding>
-                <element signature="docComment;class#Recorder#0" expanded="false" />
-                <element signature="method#writeLogToFile#0;class#Recorder#0" expanded="false" />
-                <element signature="docComment;method#getMostFrequentWordsInCluster#0;class#Recorder#0" expanded="false" />
-                <element signature="method#getMostFrequentWordsInCluster#0;class#Recorder#0" expanded="false" />
-                <element signature="docComment;method#wordDistributionToString#0;class#Recorder#0" expanded="false" />
-                <element signature="docComment;method#writeMatrixOfWords#0;class#Recorder#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+            <state relative-caret-position="562">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -185,29 +72,26 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/corpusdata/WordIsNotExsistException.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/corpusdata/files/DataGetter.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/vectors_tools/SmoothException.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/learner/WrongArgumentsException.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/corpusdata/Cluster.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/corpusdata/Tagable.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/corpusdata/Vocabulary.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/corpusdata/Word.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/learner/ClusterWords.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/learner/Recorder.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/vectors_tools/KLD.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/vectors_tools/SimpleGoodTuring.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/vectors_tools/Smoothing.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/vectors_tools/VectorOperators.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/learner/StaticVariables.java" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/resources/main.py" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/resources/getResults.py" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/resources/corpusParser.py" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/pom.xml" />
-        <option value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/java/learner/POSLearner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/corpusdata/WordIsNotExsistException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/corpusdata/files/DataGetter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vectors_tools/SmoothException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/learner/WrongArgumentsException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/corpusdata/Cluster.java" />
+        <option value="$PROJECT_DIR$/src/main/java/corpusdata/Tagable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/corpusdata/Vocabulary.java" />
+        <option value="$PROJECT_DIR$/src/main/java/corpusdata/Word.java" />
+        <option value="$PROJECT_DIR$/src/main/java/learner/ClusterWords.java" />
+        <option value="$PROJECT_DIR$/src/main/java/learner/Recorder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vectors_tools/KLD.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vectors_tools/SimpleGoodTuring.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vectors_tools/Smoothing.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vectors_tools/VectorOperators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/learner/StaticVariables.java" />
         <option value="$PROJECT_DIR$/src/resources/main.py" />
-        <option value="$PROJECT_DIR$/src/main/java/learner/StaticVars.java" />
+        <option value="$PROJECT_DIR$/src/resources/getResults.py" />
         <option value="$PROJECT_DIR$/src/main/java/learner/POSLearner.java" />
+        <option value="$PROJECT_DIR$/src/resources/corpusParser.py" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -224,18 +108,7 @@
     </option>
   </component>
   <component name="MavenProjectNavigator">
-    <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="posta" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-    </treeState>
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -269,7 +142,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -298,80 +170,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pos tagger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pos-tagger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pos tagger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pos-tagger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="learner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pos tagger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pos-tagger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mainPython" />
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="dynamic.classpath" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -379,7 +190,8 @@
     <property name="recentsLimit" value="5" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../linguistics/cognitive aspects/pos-tagger" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -390,11 +202,32 @@
       <recent name="C:\Users\Ron\Documents\GitHub\pos tagger\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\D\Documents\studies\linguistics\cognitive_aspects" />
+      <recent name="C:\D\Documents\studies\linguistics\cognitive aspects\pos-tagger" />
+      <recent name="C:\D\Documents\studies\linguistics\cognitive aspects" />
       <recent name="C:\D\Documents\studies\בלשנות\היבטים קוגניטיביים\pos-tagger\src\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.POSLearner">
+    <configuration default="false" name="POSLearner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="learner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="learner.POSLearner" />
+      <option name="VM_PARAMETERS" value=" -Xms512m -Xmx1024m" />
+      <option name="PROGRAM_PARAMETERS" value="D:\cluster_words\ D:\cluster_words\iterations\ 15 5 0.5 0.3" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../linguistics/cognitive aspects/pos-tagger" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="pos tagger" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -450,7 +283,7 @@
       <option name="MAIN_CLASS_NAME" value="learner.POSLearner" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../cognitive aspects/pos-tagger" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -624,7 +457,7 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../cognitive aspects/pos-tagger" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -784,29 +617,14 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="POSLearner" type="Application" factoryName="Application" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="learner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="learner.POSLearner" />
-      <option name="VM_PARAMETERS" value=" -Xms512m -Xmx1024m" />
-      <option name="PROGRAM_PARAMETERS" value="C:\D\Documents\studies\cs\mean_comp\ex2\clean_corpus C:\D\Documents\studies\pos_tag_dir 15 5 0.5 0.3" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="pos tagger" />
-      <envs />
-      <method />
-    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.POSLearner" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.POSLearner" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -826,32 +644,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270525" sideWeight="0.5025707" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10861182" sideWeight="0.49144253" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32828283" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10604113" sideWeight="0.49144253" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34724092" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13753213" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13881747" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39838493" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39838493" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3270525" sideWeight="0.4974293" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34589502" sideWeight="0.4974293" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1317716" sideWeight="0.50855744" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
@@ -878,20 +696,19 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/learner/POSLearner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/corpusdata/Vocabulary.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="185" column="5" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
-          <folding>
-            <element signature="e#1268#1269#0" expanded="false" />
-            <element signature="docComment;method#instance#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#setWordWithFrequency#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getFrequentWords#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getAllUnclustererdWords#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getAllUnclustererdWords#1;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#setIteratorToLastPosition#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#removeClusteredWord#0;class#Vocabulary#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -899,26 +716,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="157" column="9" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;method#initialClusterForUnclustered#0;class#Cluster#0" expanded="false" />
-            <element signature="method#initialClusterForUnclustered#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#Cluster#1;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#Cluster#2;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#size#0;class#Cluster#0" expanded="false" />
-            <element signature="method#initialWordsTreeSet#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#removeWord#0;class#Cluster#0" expanded="false" />
-            <element signature="method#removeWord#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#removeWord#1;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#addWord#1;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#addAllWords#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#mergeWithOtherCluster#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#calculateDistribution#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#restartCluster#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#isNewCluster#0;class#Cluster#0" expanded="false" />
-            <element signature="e#8419#8420#0" expanded="false" />
-            <element signature="e#8458#8459#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -947,27 +745,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="257" column="9" selection-start-line="257" selection-start-column="9" selection-end-line="257" selection-end-column="9" />
-          <folding>
-            <element signature="docComment;method#ClusterWords#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#learnPOS#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#learnPOS#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#initializeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#initializeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#iterUntilConverage#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#iterateToCluster#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#updateClustersDistribution#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#updateClustersDistribution#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#mergeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#mergeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#mergeCloseClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#mergeCloseClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#findStableClosestCluster#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#findStableClosestCluster#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#findClosestClusterToWord#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#findClosestClusterToWord#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#findClosestClusterToAllWords#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#findClosestClusterToAllWords#0;class#ClusterWords#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -975,6 +753,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -982,14 +761,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
-          <folding>
-            <element signature="docComment;class#Recorder#0" expanded="false" />
-            <element signature="method#writeLogToFile#0;class#Recorder#0" expanded="false" />
-            <element signature="docComment;method#getMostFrequentWordsInCluster#0;class#Recorder#0" expanded="false" />
-            <element signature="method#getMostFrequentWordsInCluster#0;class#Recorder#0" expanded="false" />
-            <element signature="docComment;method#wordDistributionToString#0;class#Recorder#0" expanded="false" />
-            <element signature="docComment;method#writeMatrixOfWords#0;class#Recorder#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -997,9 +769,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,16 +777,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="185" column="5" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
-          <folding>
-            <element signature="e#1268#1269#0" expanded="false" />
-            <element signature="docComment;method#instance#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#setWordWithFrequency#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getFrequentWords#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getAllUnclustererdWords#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getAllUnclustererdWords#1;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#setIteratorToLastPosition#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#removeClusteredWord#0;class#Vocabulary#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,26 +792,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;method#initialClusterForUnclustered#0;class#Cluster#0" expanded="false" />
-            <element signature="method#initialClusterForUnclustered#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#Cluster#1;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#Cluster#2;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#size#0;class#Cluster#0" expanded="false" />
-            <element signature="method#initialWordsTreeSet#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#removeWord#0;class#Cluster#0" expanded="false" />
-            <element signature="method#removeWord#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#removeWord#1;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#addWord#1;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#addAllWords#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#mergeWithOtherCluster#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#calculateDistribution#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#restartCluster#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#isNewCluster#0;class#Cluster#0" expanded="false" />
-            <element signature="e#8419#8420#0" expanded="false" />
-            <element signature="e#8458#8459#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,27 +807,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#ClusterWords#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#learnPOS#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#learnPOS#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#initializeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#initializeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#iterUntilConverage#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#iterateToCluster#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#updateClustersDistribution#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#updateClustersDistribution#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#mergeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#mergeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#mergeCloseClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#mergeCloseClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#findStableClosestCluster#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#findStableClosestCluster#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#findClosestClusterToWord#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#findClosestClusterToWord#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#findClosestClusterToAllWords#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#findClosestClusterToAllWords#0;class#ClusterWords#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1093,9 +815,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,16 +823,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding>
-            <element signature="e#1268#1269#0" expanded="false" />
-            <element signature="docComment;method#instance#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#setWordWithFrequency#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getFrequentWords#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getAllUnclustererdWords#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getAllUnclustererdWords#1;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#setIteratorToLastPosition#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#removeClusteredWord#0;class#Vocabulary#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1155,26 +866,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="271" column="32" selection-start-line="271" selection-start-column="32" selection-end-line="271" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;method#initialClusterForUnclustered#0;class#Cluster#0" expanded="false" />
-            <element signature="method#initialClusterForUnclustered#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#Cluster#1;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#Cluster#2;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#size#0;class#Cluster#0" expanded="false" />
-            <element signature="method#initialWordsTreeSet#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#removeWord#0;class#Cluster#0" expanded="false" />
-            <element signature="method#removeWord#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#removeWord#1;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#addWord#1;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#addAllWords#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#mergeWithOtherCluster#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#calculateDistribution#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#restartCluster#0;class#Cluster#0" expanded="false" />
-            <element signature="docComment;method#isNewCluster#0;class#Cluster#0" expanded="false" />
-            <element signature="e#8419#8420#0" expanded="false" />
-            <element signature="e#8458#8459#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1190,16 +882,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding>
-            <element signature="e#1268#1269#0" expanded="false" />
-            <element signature="docComment;method#instance#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#setWordWithFrequency#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getFrequentWords#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getAllUnclustererdWords#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#getAllUnclustererdWords#1;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#setIteratorToLastPosition#0;class#Vocabulary#0" expanded="false" />
-            <element signature="docComment;method#removeClusteredWord#0;class#Vocabulary#0" expanded="false" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/corpusdata/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="99" column="5" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,6 +898,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1242,6 +934,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1249,6 +942,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/learner/Recorder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="170" column="32" selection-start-line="170" selection-start-column="32" selection-end-line="170" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1259,11 +961,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/main/resources.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources.properties" />
     <entry file="file://$PROJECT_DIR$/src/resources/corpusParser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
           <caret line="138" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1271,6 +974,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1444">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1278,6 +982,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1285,142 +990,95 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../cognitive aspects/pos-tagger/src/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/corpusdata/files/DataGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-212">
+          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/learner/ClusterWords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="65" column="44" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/learner/StaticVariables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vectors_tools/DivisionByZeroException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/getResults.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="129" column="37" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/corpusParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2924">
-          <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_79/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        <state relative-caret-position="443">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="41" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_79/src.zip!/java/lang/NumberFormatException.java">
+    <entry file="file://$PROJECT_DIR$/src/resources/getResults.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="630">
+          <caret line="129" column="37" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/corpusdata/files/DataGetter.java">
+    <entry file="file://$PROJECT_DIR$/src/resources/corpusParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
+        <state relative-caret-position="1284">
+          <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
+        <state relative-caret-position="344">
           <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/learner/StaticVars.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="method#setWordToClusterTreshold#0;class#StaticVars#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/learner/ClusterWords.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-          <folding>
-            <element signature="docComment;method#ClusterWords#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#learnPOS#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#learnPOS#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#initializeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#initializeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#iterUntilConverage#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#iterateToCluster#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#updateClustersDistribution#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#updateClustersDistribution#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#mergeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#mergeClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#mergeCloseClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#mergeCloseClusters#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#findStableClosestCluster#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#findStableClosestCluster#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#findClosestClusterToWord#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#findClosestClusterToWord#0;class#ClusterWords#0" expanded="false" />
-            <element signature="docComment;method#findClosestClusterToAllWords#0;class#ClusterWords#0" expanded="false" />
-            <element signature="method#findClosestClusterToAllWords#0;class#ClusterWords#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/corpusdata/Word.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="method#Word#1;class#Word#0" expanded="false" />
-            <element signature="docComment;method#setWordData#0;class#Word#0" expanded="false" />
-            <element signature="method#setWordData#0;class#Word#0" expanded="false" />
-            <element signature="docComment;method#calculateContextDistribution#0;class#Word#0" expanded="false" />
-            <element signature="docComment;method#buildClusterContextDistribution#0;class#Word#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/learner/Recorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1550">
-          <caret line="185" column="43" selection-start-line="185" selection-start-column="43" selection-end-line="185" selection-end-column="43" />
-          <folding>
-            <element signature="docComment;class#Recorder#0" expanded="false" />
-            <element signature="method#writeLogToFile#0;class#Recorder#0" expanded="false" />
-            <element signature="docComment;method#getMostFrequentWordsInCluster#0;class#Recorder#0" expanded="false" />
-            <element signature="method#getMostFrequentWordsInCluster#0;class#Recorder#0" expanded="false" />
-            <element signature="docComment;method#wordDistributionToString#0;class#Recorder#0" expanded="false" />
-            <element signature="docComment;method#writeMatrixOfWords#0;class#Recorder#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/learner/POSLearner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_79/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
