@@ -19,7 +19,6 @@
         <!--</plugin>-->
         <!--</plugins>-->
         <!--</pluginManagement>-->
-
         <plugins>
             <plugin>
                 <!-- Build an executable JAR -->

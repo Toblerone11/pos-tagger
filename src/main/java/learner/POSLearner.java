@@ -1,12 +1,6 @@
 package learner;
 
-import com.sun.istack.internal.Nullable;
-import com.sun.javaws.exceptions.InvalidArgumentException;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 import static learner.StaticVars.*;
 
@@ -20,13 +14,14 @@ public class POSLearner {
     private static final String PYTHON_MAIN = "main.py",
                                 PY_RESULTS = "python_preprocessing" + File.separator + "getResults.py";
 
-    @Nullable
+    private static final String NO_PATH_TO_CORPUS = "-";
+
     private File getPythonExec(String pyName) {
         ClassLoader classLoader = getClass().getClassLoader();
         return new File(classLoader.getResource(pyName).getFile());
     }
 
-    public static void main(String[] args) throws IOException, InvalidArgumentException {
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         int nClusters = 77, rareTreshold = 20;
         double similarClusters = 0.2, wordClusterSimilarity = 0.3;
@@ -37,14 +32,14 @@ public class POSLearner {
         try {
             pathToCorpusDir = args[0];
         } catch (IndexOutOfBoundsException e) {
-            throw new InvalidArgumentException(args);
+            throw new IndexOutOfBoundsException();
         }
 
         String pathToOutputDir;
         try {
             pathToOutputDir = args[1];
         } catch (IndexOutOfBoundsException e) {
-            throw new InvalidArgumentException(args);
+            throw new IndexOutOfBoundsException();
         }
 
         try {
@@ -78,14 +73,23 @@ public class POSLearner {
         }
 
         // running python script first in order to preprocess the corpus and save details into files.
-        File pyFile = (new POSLearner()).getPythonExec(PYTHON_MAIN);
-        String pathToContext = pathToOutputDir + File.separator + NAME_OF_CONTEXT;
-        String pathToDictionary = pathToOutputDir + File.separator + NAME_OF_DICTIONARY;
-        String runCommand = String.format("python %s %s %s %s", pyFile, pathToCorpusDir, pathToContext, pathToDictionary);
-        System.out.println(runCommand);
-        Process pyProcess = Runtime.getRuntime().exec(runCommand);
-        BufferedReader pyOutput = new BufferedReader(new InputStreamReader(pyProcess.getInputStream()));
-        System.out.println(pyOutput.readLine());
+        File pyFile;
+        String runCommand;
+        Process pyProcess;
+        String outLine;
+        BufferedReader pyOutput;
+
+        if (!(pathToCorpusDir.equals(NO_PATH_TO_CORPUS))) {
+            pyFile = (new POSLearner()).getPythonExec(PYTHON_MAIN);
+            String pathToContext = pathToOutputDir + File.separator + NAME_OF_CONTEXT;
+            String pathToDictionary = pathToOutputDir + File.separator + NAME_OF_DICTIONARY;
+            runCommand = String.format("python %s %s %s %s", pyFile, pathToCorpusDir, pathToContext, pathToDictionary);
+            System.out.println(runCommand);
+            pyProcess = Runtime.getRuntime().exec(runCommand);
+//        BufferedReader pyOutput = new BufferedReader(new InputStreamReader(pyProcess.getInputStream()));
+            pyProcess.waitFor();
+        }
+
 
         setNumOfClusters(nClusters);
         setRareWordTreshold(rareTreshold);
@@ -98,6 +102,8 @@ public class POSLearner {
         pyFile = (new POSLearner()).getPythonExec(PY_RESULTS);
         pyProcess = Runtime.getRuntime().exec(String.format("%s %s", pyFile.getAbsolutePath(), pathToOutputDir));
         pyOutput = new BufferedReader(new InputStreamReader(pyProcess.getInputStream()));
-        System.out.println(pyOutput.readLine());
+        while ((outLine = pyOutput.readLine()) != null) {
+            System.out.println(outLine);
+        }
     }
 }

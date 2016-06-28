@@ -13,6 +13,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.TreeSet;
 
+import static learner.StaticVars.*;
+
 
 /**
  * this class implementing the algorithm of alexander clark:
@@ -61,7 +63,7 @@ public class ClusterWords {
      */
     public ClusterWords(String pathToCorpus, String pathToOutDir) {
         recorder = new Recorder(pathToOutDir);
-        dg = DataGetter.getInstance(pathToCorpus, "all_words.txt", "dictionary.txt");
+        dg = DataGetter.getInstance(pathToOutDir, NAME_OF_CONTEXT, NAME_OF_DICTIONARY);
         Vocabulary.instance().restartIterator();
         this.numOfClusters = StaticVars.getNumOfClusters() + FOR_UNCLUSTERED;
         allClusters = new Cluster[this.numOfClusters];

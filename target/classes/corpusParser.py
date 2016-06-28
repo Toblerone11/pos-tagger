@@ -1,4 +1,4 @@
-import re
+import re, sys
 import string
 # from nltk.book import gutenberg
 from nltk.corpus import brown
@@ -17,7 +17,44 @@ words_context = dict()
 # NAME_OF_CORPUS = "corpus.txt"
 legal_word = re.compile("([\w]+|\^|\$)")
 
+def activate_with_progress(func, generator, max_size, elements_name):
+    """
+    this function wraps any other function which needs to be inspected with progress bar and prints progress bar
+    to the comand prompt.
+	:param func: gets one element which the generator outputs, return None (void)
+    :param generator: a generator type to iterate over its elements,
+    :param max_size: the amount of data the generator may yield.
+    :param elements_name: str, the name of each element, used for the recording data.
+    """
+    post_count = 0
+    percentage = int(max_size / 100)
+    percent_count = 0
+    print("num of all %s: %d\npercentage: %d\n" % (elements_name, max_size, percentage))
+    sys.stdout.write("\r[%s%s] %d%s" % ('#' * percent_count, ' ' * (100 - percent_count), percent_count, '%'))
+    sys.stdout.flush()
 
+    has_next = True
+    while has_next:
+        try:
+            func(generator.__next__())
+            post_count += 1
+            if post_count == percentage:
+                percent_count += 1
+                post_count = 0
+                sys.stdout.write(
+                        "\r[%s%s] %d%s" % ('#' * percent_count, ' ' * (100 - percent_count), percent_count, '%'))
+                sys.stdout.flush()
+                if percent_count == 62:
+                    print('', end='')
+
+                    # if percent_count == 80:
+                    #     break
+        except StopIteration:
+            has_next = False
+            pass
+    print('\n')
+
+	
 def parseSentence(sentence):
     """
     gets prepared sentence without redundunt symbols
@@ -93,20 +130,19 @@ def readSentence(sentence, table):
 
 
 def iterate_simple_file(name_of_corpus, num_of_lines=float('inf')):
-    print("parsing file: " + name_of_corpus)
     table = {ord(x): "" for x in string.punctuation}  # tokens to strip from the corpus.
     with open(name_of_corpus, 'r', 1000) as corpus:
         line = corpus.readline()
         lineNum = 0
         while line != "" and lineNum < num_of_lines:
-            readSentence(line, table)
+            yield line
+            # readSentence(line, table)
             line = corpus.readline()
     print("Done!")
 
 
 def iterate_wiki_corpus(name_of_corpus):
     print("parsing wikipedia corpus")
-    table = {ord(x): "" for x in string.punctuation}  # tokens to strip from the corpus.
     start_pattern = re.compile("<doc[ \"=\w]+>")
     end_pattern = re.compile("(See also.|References.|External links.|ENDOFARTICLE.)")
     separator = re.compile("[\.?:!-]")
@@ -193,11 +229,18 @@ def words2file(pathname_of_words):
                     key_value_toWrite = None
 
 def parseOnCorpus(path_to_corpus, path_to_context, path_to_words):
-	"""
-
-	:rtype : void
-	"""
-	iterate_simple_file(path_to_corpus)
-	iterate_brown_corpus()
-	context2file(path_to_context)
-	words2file(path_to_words)
+    it = iterate_simple_file(path_to_corpus)
+    def closure_func(table):
+        def parseSent(sentence):
+            readSentence(sentence, table)
+		
+        return parseSent
+	
+    table = {ord(x): "" for x in string.punctuation}  # tokens to strip from the corpus.
+    func = closure_func(table)
+    print("parsing file: " + path_to_corpus)
+    activate_with_progress(func, it, 8820000, "sentence")
+	
+    iterate_brown_corpus()
+    context2file(path_to_context)
+    words2file(path_to_words)
